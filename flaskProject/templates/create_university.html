@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создать университет</title>
+</head>
+<body>
+<h1>Создать университет</h1>
+<form method="post">
+    {{ form.hidden_tag() }}
+    <p>{{ form.full_name.label }}: {{ form.full_name() }}</p>
+    <p>{{ form.short_name.label }}: {{ form.short_name() }}</p>
+    <p>{{ form.creation_date.label }}: {{ form.creation_date() }}</p>
+    <p><input type="submit" value="Create"></p>
+</form>
+</body>
+</html>

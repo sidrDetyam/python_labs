@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ university.short_name }} - Студенты</title>
+</head>
+<body>
+    <h1>{{ university.short_name }} - Студенты</h1>
+    <ul>
+        {% for student in students %}
+            <li>{{ student.full_name }} - {{ student.admission_year }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('create_student') }}">Создать студента</a>
+</body>
+</html>
