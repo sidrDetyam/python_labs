@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список университетов</title>
+</head>
+<body>
+<h1>Список студентов</h1>
+<ul>
+    {% for student in students %}
+        <li>
+            {{ student.full_name }} - {{ student.birth_date }} - Год
+            поступления: {{ student.enrollment_year }}
+            [<a href="{% url 'student_edit' pk=student.pk %}">Изменить</a>]
+            [<a href="{% url 'student_delete' pk=student.pk %}">Удалить</a>]
+        </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'student_new' %}">Добавить</a>
+<a href="{% url 'university_list' %}">Список университетов</a>
+</body>
+</html>
