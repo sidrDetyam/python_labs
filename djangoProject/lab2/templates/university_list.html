@@ -26,8 +26,10 @@
     {% endfor %}
 </ul>
 
-<a href="{% url 'university_new' %}">Добавить</a>
-<a href="{% url 'students_list' %}">Список студентов</a>
-
+<div>
+    <a href="{% url 'university_new' %}">Добавить университет</a>
+    <br>
+    <a href="{% url 'students_list' %}">Список студентов</a>
+</div>
 </body>
 </html>
